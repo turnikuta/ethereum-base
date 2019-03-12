@@ -1,0 +1,24 @@
+{
+  "name": "abc_erc20_token",
+  "version": "1.0.0",
+  "description": "sample erc20 token based on openzeppelin",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "erc20",
+    "token",
+    "ethereum",
+    "openzeppelin"
+  ],
+  "author": "Turnikuta",
+  "license": "ISC",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.1.3",
+    "truffle": "^5.0"
+  }
+}
