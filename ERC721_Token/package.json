@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "erc20",
+    "erc721",
     "token",
     "ethereum",
     "openzeppelin"
