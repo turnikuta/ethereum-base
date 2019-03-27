@@ -1,4 +1,4 @@
-## What it is?
+# What it is?
 Create an ERC-721 non-fungible token (NFT) and play around with it...
 
 It is based on
@@ -8,7 +8,7 @@ It is based on
 
 If you want to use Ropsten or any other ethereum network, just modify `truffle-config.js`
 
-## Installation
+# Installation
 
 Install the Node.js Dependencies
 
@@ -19,7 +19,7 @@ Download the Ganache AppImage  (and make it executable)
 
 https://www.truffleframework.com/ganache
 
-## Explore
+# Explore
 
 Start Ganache AppImage
 

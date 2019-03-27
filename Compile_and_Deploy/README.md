@@ -1,4 +1,4 @@
-## What it is?
+# What it is?
 Compile and deploy your Solidity Smart Contracts with your own scripts.
 
 The deployment is based on
@@ -10,7 +10,7 @@ There are 2 sample contracts available ("Hello.sol", "World.sol").
 The Default URL `http://localhost:7545` is customizable in the file `deploy_config.js`.
 
 
-## Installation
+# Installation
 
 Install the Node.js Dependencies
 
@@ -18,7 +18,7 @@ Install the Node.js Dependencies
 
 [Download](http://www.truffleframework.com/ganache) the Ganache AppImage  (and make it executable) 
 
-## Explore
+# Explore
 
 1. Start Ganache AppImage
 

@@ -12,7 +12,7 @@ It is based on
 
 
 
-## Installation
+# Installation
 
 ##### Ethereum Blockchain
 [Download](https://www.truffleframework.com/ganache) the Ganache AppImage (and make it executable)
@@ -35,7 +35,7 @@ Deploy the contracts
 
 **Note:** Please record the addresses of the generated contracts, they are required in the application.
 
-## Explore
+# Explore
 
 Start your Browser and open the file `index.html`
 
