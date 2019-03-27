@@ -1,0 +1,6 @@
+{
+  "network_config": {
+    "websocket": "ws://localhost:7545"
+  },
+  "contract_address": "...automatically added during deployment"
+}

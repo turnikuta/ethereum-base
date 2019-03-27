@@ -1,0 +1,61 @@
+const Abicode = require('./build/contracts/MarketRate.json').abi;
+const FetchStream = require("fetch").FetchStream;
+
+const CONFIG = './app-config.json';
+const config = require(CONFIG);
+
+const Web3 = require('web3');
+const web3 = new Web3(new Web3.providers.WebsocketProvider(config.network_config.websocket));
+
+let DATA;
+
+function cleanup(){
+  web3.currentProvider.connection.close();
+}
+
+function fetchData(){
+  return function(){
+    let fetch = new FetchStream('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=EUR&e=kraken');
+    fetch.on('data', chunk => {
+      JSON.parse(chunk.toString()).EUR; 
+    });
+  }
+};
+
+web3.eth.getAccounts()
+.then( accounts => {
+  let newRate = fetchData(); 
+  console.log("newRate: ", newRate());
+  cleanup();
+})
+
+/*
+web3.eth.getAccounts()
+.then( accounts => {
+  // Account 0 is the owner of the contract
+  // Only the owner is allowed to update the contract 
+  let account = accounts[0];
+
+  let contract = new web3.eth.Contract(Abicode);
+
+  contract.events.UpdateRateEvent({fromBlock: "latest"})
+  .on('data', (event) => {
+    if (event.event === "UpdateRateEvent" ) {
+      let newRate = fetchData();
+
+      let abi = contract.methods.setEthRate(newRate).encodeABI();
+      
+      web3.eth.sendTransaction({
+        from: account,
+        to: config.contract_address,
+        data: abi,
+        gas: 50000
+      });
+
+    }
+  })
+})
+.catch( (err) => console.log("Something went wrong!\n\n", err) );
+*/
+
+
