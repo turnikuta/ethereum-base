@@ -1,6 +1,6 @@
 
 # What it is?
-This simple Ethereum application demonstrates the usage of a oracles, to provide external data sources to Ethereum smart contracts.
+This simple Ethereum application demonstrates the usage of an oracle, to provide external data sources to Ethereum smart contracts.
 
 It is based on
 - [Ganache](https://www.truffleframework.com/ganache)
@@ -17,6 +17,9 @@ Install the Node.js Dependencies
 > The URL used to connect to Ganache is `http://localhost:7545`.
 > 
 >This can be adjusted in the application config file `app-config.js`
+
+#### Note:
+I had to use web3 Version 1.0.0-beta.46, because earlier and later beta versions didn't work (see [here](https://github.com/ethereum/web3.js/issues/2601))
 
 
 # Explore
@@ -42,8 +45,8 @@ Contract address added to configuration file!
 ```
 ~/App_Market_Rate_Oracle$ node app.js
 Oraclize ETH Market Rate (Update every 60 seconds)
-03/27/2019, 1:08:57 PM ==>  122.54
-03/27/2019, 1:09:57 PM ==>  122.55
+03/27/2019, 1:08:57 PM ==>  122.54 EUR
+03/27/2019, 1:09:57 PM ==>  122.55 EUR
 ```
 
 

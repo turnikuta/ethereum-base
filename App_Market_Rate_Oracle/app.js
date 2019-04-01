@@ -6,7 +6,7 @@ const config = require(CONFIG);
 const Web3 = require('web3');
 const web3 = new Web3(new Web3.providers.WebsocketProvider(config.network_config.websocket));
 
-const updateInterval = 60000;
+const updateInterval = config.update_interval * 1000;
 
 process.on('SIGINT', cleanup.bind());
 
@@ -51,7 +51,7 @@ function getData(status){
 
       // Show the received data
       if (status !== "init") {
-        console.log(formattedDate(timestamp) + ' ==>  ' + value);
+        console.log(formattedDate(timestamp) + ' ==> ' + value + ' EUR');
       }
   
       // Trigger update event

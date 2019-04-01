@@ -2,5 +2,6 @@
   "network_config": {
     "websocket": "ws://localhost:7545"
   },
+  "update_interval": 60,
   "contract_address": "...automatically added during deployment"
 }
